@@ -8,15 +8,25 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
         Bolsa < Chocolatina > bolsaCho = new Bolsa < Chocolatina > (3);
-        Chocolatina c =  new Chocolatina("milka");
-        Chocolatina c1 = new Chocolatina("milka");
-        Chocolatina c2 = new Chocolatina("ferrero");
+        Chocolatina c =  new Chocolatina("La Ibérica");
+        Chocolatina c1 = new Chocolatina("Milka");
+        Chocolatina c2 = new Chocolatina("Ferrero");
         bolsaCho.add(c);
         bolsaCho.add(c1);
         bolsaCho.add(c2);
 
         for (Chocolatina chocolatina: bolsaCho) {
-            System.out.println(chocolatina.getMarca());
+            System.out.println("Marca: " + chocolatina.getMarca());
+        }
+
+        Bolsa<Golosina> bolsaGolo = new Bolsa<>(3);
+        bolsaGolo.add(new Golosina("Chupetin", 5.0));
+        bolsaGolo.add(new Golosina("Chinchin", 3.5));
+        bolsaGolo.add(new Golosina("Oleole", 3.0));
+
+        System.out.println("Golosinas en la bolsa:");
+        for (Golosina golosina : bolsaGolo) {
+            System.out.println("Nombre: " + golosina.getNombre() + "  Peso: " + golosina.getPeso());
         }
     }
 }
