@@ -18,14 +18,20 @@ public class TestGen {
 
         System.out.println("Cajoneria Golosinas:");
         System.out.println(cajoneriaGolosinas);
+        System.out.println("Buscar Chinchin: " + cajoneriaGolosinas.search(new Golosina("Chinchin", 3.5)));
+        System.out.println("Eliminar Chupetin: " + cajoneriaGolosinas.delete(new Golosina("Chupetin", 5.0)));
+        System.out.println(cajoneriaGolosinas);
 
-         System.out.println("Buscar Chinchin: " + cajoneriaGolosinas.search(new Golosina("Chinchin", 3.5)));
-
-         System.out.println("Eliminar Chupetin: " + cajoneriaGolosinas.delete(new Golosina("Chupetin", 5.0)));
-
-         System.out.println("Después de eliminar:");
-         System.out.println(cajoneriaGolosinas);
+        Cajoneria<Chocolatina> cajoneriaChocolatinas = new Cajoneria<>();
+        cajoneriaChocolatinas.addCaja(new Caja<>("Rojo", new Chocolatina("La Ibérica")));
+        cajoneriaChocolatinas.addCaja(new Caja<>("Amarillo", new Chocolatina("Milka")));
+        cajoneriaChocolatinas.addCaja(new Caja<>("Verde", new Chocolatina("Ferrero")));
+ 
+        System.out.println("Cajoneria Chocolatinas:");
+        System.out.println(cajoneriaChocolatinas);
+        System.out.println("Buscar Milka: " + cajoneriaChocolatinas.search(new Chocolatina("Milka")));
+        System.out.println("Eliminar Ferrero: " + cajoneriaChocolatinas.delete(new Chocolatina("Ferrero")));
+        System.out.println(cajoneriaChocolatinas);
     }
-    
 }
  
