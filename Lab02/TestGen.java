@@ -16,7 +16,16 @@ public class TestGen {
         cajoneriaGolosinas.addCaja(new Caja<>("Azul", new Golosina("Morocha", 4.2)));
         cajoneriaGolosinas.addCaja(new Caja<>("Naranja", new Golosina("Oreo", 2.8)));
 
+        System.out.println("Cajoneria Golosinas:");
+        System.out.println(cajoneriaGolosinas);
 
+         System.out.println("Buscar Chinchin: " + cajoneriaGolosinas.search(new Golosina("Chinchin", 3.5)));
+
+         System.out.println("Eliminar Chupetin: " + cajoneriaGolosinas.delete(new Golosina("Chupetin", 5.0)));
+
+         System.out.println("Después de eliminar:");
+         System.out.println(cajoneriaGolosinas);
     }
+    
 }
  
