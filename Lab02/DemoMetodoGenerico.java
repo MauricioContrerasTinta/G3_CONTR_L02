@@ -5,10 +5,12 @@ class DemoMetodoGenerico {
         //Si las longitudes de los array son diferentes, entonces los array son diferentes
         if (x.length != y.length)
             return false;
-        for (int i = 0; i < x.length; i++)
-            if(!x[i].equals(y[i]))
+        for (int i = 0; i < x.length; i++) {
+            if(!x[i].equals(y[i])) {
                 return false; //arrays diferentes
-            return true; // Contenido de arrays son equivalentes
+            }
+        }    
+        return true; // Contenido de arrays son equivalentes
     }
 
     public static void main(String[] args) {
