@@ -16,4 +16,13 @@ public class Cajoneria<T> {
         return "no encontrado";
     }
 
+    public T delete(T objeto) {
+        for (int i = 0; i < cajas.size(); i++) {
+            if (cajas.get(i).getContenido().equals(objeto)) {
+                return cajas.remove(i).getContenido();
+            }
+        }
+        return null;
+    }
 }
+
