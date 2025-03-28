@@ -13,6 +13,15 @@ class DemoMetodoGenerico {
         return true; // Contenido de arrays son equivalentes
     }
 
+    static <T> boolean exist(T[] lista, T dato) {
+        for(T elemento : lista) {
+            if(elemento.equals(dato)){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         Integer nums[]={1,2,3,4,5};
         Integer nums2[]={1,2,3,4,5};
