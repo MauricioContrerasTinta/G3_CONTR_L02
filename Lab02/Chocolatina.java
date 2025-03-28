@@ -14,4 +14,12 @@ public class Chocolatina {
     public void setMarca(String marca) {
         this.marca = marca;
     }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Chocolatina chocolatina = (Chocolatina) obj;
+        return marca.equals(chocolatina.marca);
+    }
 }
