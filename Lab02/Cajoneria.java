@@ -24,5 +24,17 @@ public class Cajoneria<T> {
         }
         return null;
     }
+
+    @Override
+    public String toString() {
+        String resultado = "Posicion\tColor\tCaja\tObjeto\n";
+        int posicion = 1;
+        
+        for (Caja caja : cajas) {
+            resultado += posicion++ + "\t" + caja.getColor() + "\t" + caja.getContenido() + "\n";
+        }
+        
+        return resultado;
+    }
 }
 

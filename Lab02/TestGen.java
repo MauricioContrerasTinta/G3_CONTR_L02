@@ -9,6 +9,13 @@ public class TestGen {
         System.out.println(DemoMetodoGenerico.exist(w, 34));        
         // System.out.println(Utilidades.exist(w, "Salas")); // Error 
 
+        Cajoneria<Golosina> cajoneriaGolosinas = new Cajoneria<>();
+        cajoneriaGolosinas.addCaja(new Caja<>("Rojo", new Golosina("Chupetin", 5.0)));
+        cajoneriaGolosinas.addCaja(new Caja<>("Amarillo", new Golosina("Chinchin", 3.5)));
+        cajoneriaGolosinas.addCaja(new Caja<>("Verde", new Golosina("Oleole", 3.0)));
+        cajoneriaGolosinas.addCaja(new Caja<>("Azul", new Golosina("Morocha", 4.2)));
+        cajoneriaGolosinas.addCaja(new Caja<>("Naranja", new Golosina("Oreo", 2.8)));
+
 
     }
 }
